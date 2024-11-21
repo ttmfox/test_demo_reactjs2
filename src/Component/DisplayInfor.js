@@ -29,7 +29,7 @@ class DisplayInfor extends React.Component {
                     </span>
                 </div>
                 {this.state.isShowLishUser &&
-                    <div>
+                    <>
                         {listUser.map((user, index) => {
                             console.log("check map users", user)
 
@@ -46,7 +46,7 @@ class DisplayInfor extends React.Component {
 
                         })}
 
-                    </div>
+                    </>
                 }
             </div>
         )
