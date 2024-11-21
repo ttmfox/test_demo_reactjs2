@@ -1,5 +1,6 @@
 
 import React from "react";
+import './DisplayInfor.scss';
 
 class DisplayInfor extends React.Component {
 
@@ -18,7 +19,7 @@ class DisplayInfor extends React.Component {
         //props = properties 
         // console.log(listUser)
         return (
-            <div>
+            <div className="displayInfor_container">
                 <div>
                     <span onClick={() => { this.HandleshowHide() }}>
 
