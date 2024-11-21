@@ -1,6 +1,7 @@
 
 import React from "react";
 import './DisplayInfor.scss';
+import logo from './../logo.svg'
 
 class DisplayInfor extends React.Component {
 
@@ -19,7 +20,8 @@ class DisplayInfor extends React.Component {
         //props = properties 
         // console.log(listUser)
         return (
-            <div className="displayInfor_container">
+            <div className='displayInfor_container'>
+                <img src={logo} />
                 <div>
                     <span onClick={() => { this.HandleshowHide() }}>
 
