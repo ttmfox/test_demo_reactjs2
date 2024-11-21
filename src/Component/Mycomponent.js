@@ -1,5 +1,5 @@
 import { eventWrapper } from "@testing-library/user-event/dist/utils";
-import React from "react";
+import React, { useId } from "react";
 import AddUseInfor from "./AddUseInfor";
 import DisplayInfor from "./DisplayInfor";
 
@@ -15,8 +15,16 @@ class Mycomponent extends React.Component {
     handleAddnewUser = (userOject) => {
         console.log(userOject)
         this.setState({
-            // listUser: [userOject, ...this.state.listUser] them vao dau mang
-            listUser: [...this.state.listUser, userOject]
+            listUser: [userOject, ...this.state.listUser] //them vao dau mang
+            // listUser: [...this.state.listUser, userOject] them vao cuoi mang 
+        })
+    }
+
+    handleDeleteUser = (userId) => {
+        let listUsersClone = this.state.listUser;
+        listUsersClone = listUsersClone.filter(item => item.id !== userId)
+        this.setState({
+            listUser: listUsersClone
         })
     }
 
@@ -34,6 +42,7 @@ class Mycomponent extends React.Component {
                     {/* <DisplayInfor name="IT" age={myAge} /> */}
                     <DisplayInfor
                         listUser={this.state.listUser}
+                        handleDeleteUser={this.handleDeleteUser}
 
                     />
                 </div>
