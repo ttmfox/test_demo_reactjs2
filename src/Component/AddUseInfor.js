@@ -6,7 +6,7 @@ class AddUseInfor extends React.Component {
         address: 'Hai_Duong',
         age: 18
     };
-    HandleOnChangeInput = (event) => {
+    HandleOnChangeInput = (event) => {  //1112
         this.setState({
             Name: event.target.value
         })
